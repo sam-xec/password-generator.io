@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password Generator</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="input.css">
+</head>
+<body>
+    <main class="w-screen h-screen bg-black flex justify-center items-center">
+        <div id="container" class="h-72 w-3/5 bg-blue-950 rounded-3xl flex items-center justify-center flex-col overflow-hidden">
+            <div class="display h-1/2 w-full flex items-center justify-center">
+                <input type="text"  id="passwordS" class="h-10 w-1/2 rounded-lg font-semibold px-4 text-xl">
+                <button id="copy-btn" class="px-4 py-3 rounded-lg ml-4 bg-slate-500 font-bold">COPY</button>
+            </div>
+
+            <div id="input-dets" class="h-1/2 w-full bg-white grid grid-cols-2 p-14 ">
+                <div class="length">
+                   <input type="range" min="10" max="20" value="10" name="length" id="length-bar">
+                   <label for="length" id="length-display" class="m-1">length: <span id="length-val"></span></label>
+                </div>
+                    <div class="check flex gap-x-3 justify-center">
+                        <label for="number" class="text-xl">No.</label>
+                        <input type="checkbox" name="number" id="number-box" onchange="generatePassword()">
+<br>
+                        <label for="char" class="text-xl">sp. char</label>
+                        <input type="checkbox" name="char" id="char" onchange="generatePassword()">
+            </div>
+            </div>
+       
+        </div>
+    </main>
+   <script src="main.js"></script>
+</body>
+</html>
